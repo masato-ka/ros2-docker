@@ -14,7 +14,7 @@ You can develop ros2 application without native ros2 environment. This is suppor
 Do don't need install. only build docker image for ros2.
 
 ```
-$git clone
+$git clone https://github.com/masato-ka/ros2-docker.git
 $cd ros2-docker/app_build_container
 $docker build -t <Own image name> .
 $cd ../
@@ -47,20 +47,26 @@ $ros2-docker.sh workspace run <pkg_name> <node_name>
 
 ```
 $ros2-docker.sh workspace launch <pkg_name> <node_name>
+```
+
 If you need gazebo GUI
+```
 $ros2-docker.sh workspace gazebo_launch <pkg_name> <node_name>
 ```
+After connect localhost:5900 by VNC tool(macOS recommend Tiger VNC.)
 
 ## Rviz
 
 ```
 $ros2-docker.sh workspace rviz
 ```
+After connect localhost:5900 by VNC tool(macOS recommend Tiger VNC.)
 
 ## Gazebo
 ```
 $ros2-docker.sh workspace gazebo
 ```
+After connect localhost:5900 by VNC tool(macOS recommend Tiger VNC.)
 
 ## vcs import
 ```
@@ -87,4 +93,4 @@ This software license under MIT licence.
 
 ## 8. Author 
 
-[masato-ka]()
+[masato-ka](https://github.com/masato-ka/ros2-docker)
