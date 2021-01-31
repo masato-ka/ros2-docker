@@ -9,7 +9,7 @@ do
   case $OPT in
     i) OPT_FLAG_i=1;OPT_VALUE_i=$OPTARG ;;
     g) OPT_FLAG_g=1;;
-    t) OPT_FLAB_t=1;OPT_VALUE_t=$OPTARG ;;
+    t) OPT_FLAG_t=1;OPT_VALUE_t=$OPTARG ;;
     h) echo  "Help";;
     :) echo  "[ERROR] Option argument is undefined.";;   #
     \?) echo "[ERROR] Undefined options.";;
@@ -29,7 +29,7 @@ if [[ -n "${OPT_FLAG_g+UNDEF}" ]];then
   GUI=1
 fi
 if [[ -n "${OPT_FLAG_t+UNDEF}" ]];then
-  echo "GUI mode"
+  echo "create docker image="${OPT_VALUE_t}
   TARGET_IMAGE_NAME=$OPT_VALUE_t
 fi
 

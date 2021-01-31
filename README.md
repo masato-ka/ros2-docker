@@ -76,7 +76,7 @@ $ros2-docker moveit_ws vcs
 ## Attention: You need all download directory move to src folder manually.
 
 ## rosdep subcommand create new docker image that is resolve dependencies for moveit. 
-$ros2-docker -o moveit_depends_image moveit_ws rosdep install -r --from-paths . --ignore-src --rosdistro foxy -y
+$ros2-docker -t moveit_depends_image moveit_ws rosdep install -r --from-paths . --ignore-src --rosdistro foxy -y
 
 ## Take many time for build.
 ## Attention: Builded pkg is not contain in docker image. Therefor if you need moveit for your own pkg, create new docker image manually.
