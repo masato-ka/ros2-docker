@@ -21,7 +21,7 @@ $cd ros2-docker/app_build_container
 $docker build -t <Own image name> .
 $cd ../
 $sudo chmod +x ros2-docker.sh
-$exprot PATH=$PATH:$PWD/ros2-docker.sh
+$export PATH=$PATH:$PWD/ros2-docker.sh
 ```
 
 ## 4. Usage
@@ -71,7 +71,7 @@ $ros2-docker.sh ros_ws rviz
 * 2.[Moveit2 build and demo run](https://moveit.ros.org/install-moveit2/source/)
 ```
 $mkdir -p moveit_ws/src
-$curl wget https://raw.githubusercontent.com/ros-planning/moveit2/main/moveit2.repos -O moveit_ws/.rosintall
+$curl wget https://raw.githubusercontent.com/ros-planning/moveit2/main/moveit2.repos -o moveit_ws/.rosintall
 $ros2-docker moveit_ws vcs
 ## Attention: You need all download directory move to src folder manually.
 
